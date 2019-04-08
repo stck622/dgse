@@ -7,8 +7,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"
         Height="600" Width="1024">
-    <Grid>
-        <Grid x:Name="Topmenu_grid" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1024">
+    <Grid HorizontalAlignment="Left" Width="1024">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="TopBar" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1024" Grid.ColumnSpan="2" MouseDown="TopBar_MouseDown">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -30,11 +34,38 @@
                 <Button x:Name="Info_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
                     <materialDesign:PackIcon x:Name="Info_icon" Kind="InfoOutline"/>
                 </Button>
-                <Button x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2.5">
+                <Button x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2.5" MouseDown="Close_bt_MouseDown">
                     <materialDesign:PackIcon x:Name="Close_icon" Kind="Close"/>
                 </Button>
             </StackPanel>
         </Grid>
+        
+        <StackPanel x:Name="SideBar" HorizontalAlignment="Left" Height="570" Margin="0,30,0,0" VerticalAlignment="Top" Width="240" Background="#FFE6E6E6">
+            <StackPanel.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </StackPanel.Effect>
+            <Button Margin="23,30,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Label Content="DGSW.hs.kr" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="50,0,0,0"/>
+            </Button>
+
+        </StackPanel>
 
     </Grid>
 </Window>

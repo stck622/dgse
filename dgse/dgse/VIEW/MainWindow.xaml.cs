@@ -24,5 +24,15 @@ namespace dgse
         {
             InitializeComponent();
         }
+
+        private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Close_bt_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
