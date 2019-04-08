@@ -28,23 +28,23 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
-                <Button x:Name="Minimode_bt"  Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
+                <Button Style="{StaticResource MyButton}" x:Name="Minimode_bt"  Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
                     <materialDesign:PackIcon x:Name="Minimode_icon" Kind="WindowMinimize"/>
                 </Button>
-                <Button x:Name="Info_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
+                <Button Style="{StaticResource MyButton}" x:Name="Info_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
                     <materialDesign:PackIcon x:Name="Info_icon" Kind="InfoOutline"/>
                 </Button>
-                <Button x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2.5" MouseDown="Close_bt_MouseDown">
+                <Button Style="{StaticResource MyButton}" x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2,0,0" Click="Close_bt_Click" VerticalAlignment="Top">
                     <materialDesign:PackIcon x:Name="Close_icon" Kind="Close"/>
                 </Button>
             </StackPanel>
         </Grid>
-        
+
         <StackPanel x:Name="SideBar" HorizontalAlignment="Left" Height="570" Margin="0,30,0,0" VerticalAlignment="Top" Width="240" Background="#FFE6E6E6">
             <StackPanel.Effect>
                 <DropShadowEffect Opacity="0.2"/>
             </StackPanel.Effect>
-            <Button Margin="23,30,23,0" BorderBrush="{x:Null}" Height="40">
+            <Button Style="{StaticResource MyButton}" x:Name="DgswSite_bt" Margin="23,30,23,0" BorderBrush="{x:Null}" Height="40">
                 <Button.Effect>
                     <DropShadowEffect Opacity="0.3"/>
                 </Button.Effect>
@@ -62,10 +62,172 @@
                         <GradientStop Color="#FF30BD3F"/>
                     </LinearGradientBrush>
                 </Button.Background>
-                <Label Content="DGSW.hs.kr" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="50,0,0,0"/>
+                <Grid Height="30" Width="184">
+                    <Label Content="DGSW.hs.kr" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,17,0"/>
+                    <materialDesign:PackIcon Kind="School" Margin="10,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource MyButton}" x:Name="Nas_bt" Margin="23,20,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Grid Height="30" Width="184">
+                    <Label Content="DGSW-Nas" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,22,0"/>
+                    <materialDesign:PackIcon Kind="DatabasePlus" Margin="12,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource MyButton}" x:Name="Checking_bt" Margin="23,20,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Grid Height="30" Width="184">
+                    <Label Content="대소고 인증제" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,10,0"/>
+                    <materialDesign:PackIcon Kind="WindowRestore" Margin="12,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource MyButton}" x:Name="CodeUp_bt" Margin="23,20,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Grid Height="30" Width="184">
+                    <Label Content="CodeUp" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,10,0"/>
+                    <materialDesign:PackIcon Kind="CodeBraces" Margin="12,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource MyButton}" x:Name="Band_bt" Margin="23,20,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Grid Height="30" Width="184">
+                    <Label Content="Band" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,10,0"/>
+                    <materialDesign:PackIcon Kind="Book" Margin="12,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
+            </Button>
+            <Button Style="{StaticResource MyButton}" x:Name="Classroom_bt" Margin="23,20,23,0" BorderBrush="{x:Null}" Height="40">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.3"/>
+                </Button.Effect>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF07BD97" Offset="1"/>
+                        <GradientStop Color="#FF30BD3F"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Grid Height="30" Width="184">
+                    <Label Content="Classroom" Foreground="White" FontFamily="NanumSquareRound Bold" FontSize="18" Margin="58,0,10,0"/>
+                    <materialDesign:PackIcon Kind="Clipboard" Margin="12,2,0,0" Width="24" Height="24" Foreground="White"/>
+                </Grid>
             </Button>
 
         </StackPanel>
+        <ScrollViewer HorizontalAlignment="Left" Height="570" Margin="240,30,0,0" VerticalAlignment="Top" Width="784" Grid.ColumnSpan="2">
+            <StackPanel Height="1363" Width="766">
+                <Grid Height="375">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/dgse;component/Resource/BackGround/afternoon.png"/>
+                    </Grid.Background>
+                    <Grid HorizontalAlignment="Left" Height="154" Margin="10,10,0,0" VerticalAlignment="Top" Width="746">
+                        <Label Content="오후 8:43" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="NanumSquareRound Light" FontSize="58"/>
+                        <Label Content="2019-04-08 월요일" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="NanumSquareRound Light" FontSize="20" FontStretch="Condensed"/>
+                        <Button Style="{StaticResource MyButton}" Content="중간고사 D-22" Margin="516,0,0,0" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Height="52" VerticalAlignment="Top" FontFamily="NanumSquareRound Light" FontSize="20"/>
+                    </Grid>
+                    <Grid Margin="10,169,517,10">
+                        <Rectangle Fill="#CCF4F4F5" Height="196" VerticalAlignment="Top" RadiusX="20" RadiusY="20"/>
+
+                        <Label Content="조식" HorizontalAlignment="Left" Margin="47,15,0,0" VerticalAlignment="Top" Foreground="#FF0090FF" FontFamily="NanumSquareRound Regular" FontSize="20" FontStretch="Condensed"/>
+                        <Image Margin="6,6,196,142" Source="/dgse;component/milk.png" Stretch="Fill" Width="48" Height="48"/>
+                        <TextBlock x:Name="blackfast_block" HorizontalAlignment="Left" Margin="13,48,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="133" Width="216" TextAlignment="Center"/>
+
+                    </Grid>
+                    <Grid Margin="517,169,10,10">
+                        <Rectangle Fill="#CCF4F4F5" Height="196" VerticalAlignment="Top" RadiusX="20" RadiusY="20"/>
+
+                        <Label Content="석식" HorizontalAlignment="Left" Margin="47,15,0,0" VerticalAlignment="Top" Foreground="#FF0090FF" FontFamily="NanumSquareRound Regular" FontSize="20" FontStretch="Condensed"/>
+                        <TextBlock x:Name="dinner_block" HorizontalAlignment="Left" Margin="13,48,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="133" Width="216" TextAlignment="Center"/>
+                        <Image Margin="15,15,192,149" Source="/dgse;component/restaurant.png" Stretch="Fill" Width="32" Height="32"/>
+
+                    </Grid>
+                    <Grid Margin="264,169,263,10">
+                        <Rectangle Fill="#CCF4F4F5" Height="196" VerticalAlignment="Top" RadiusX="20" RadiusY="20"/>
+
+                        <Label Content="중식" HorizontalAlignment="Left" Margin="47,15,0,0" VerticalAlignment="Top" Foreground="#FF0090FF" FontFamily="NanumSquareRound Regular" FontSize="20" FontStretch="Condensed"/>
+                        <TextBlock x:Name="lunch_block" HorizontalAlignment="Left" Margin="13,48,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="133" Width="216" TextAlignment="Center"/>
+                        <Image Margin="16,15,191,149" Source="/dgse;component/sandwich.png" Stretch="Fill" Width="32" Height="32"/>
+
+                    </Grid>
+
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
 
     </Grid>
+
+
 </Window>

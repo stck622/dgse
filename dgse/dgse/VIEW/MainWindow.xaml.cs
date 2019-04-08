@@ -29,8 +29,7 @@ namespace dgse
         {
             DragMove();
         }
-
-        private void Close_bt_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Close_bt_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

@@ -107,5 +107,17 @@
     <Folder Include="CONTROL\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\BackGround\afternoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Icon\milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sandwich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="restaurant.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
