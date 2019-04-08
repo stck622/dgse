@@ -1,1 +1,15 @@
-﻿
+﻿상단바 = "Topmenu_grid"
+
+
+
+종료버튼 = "Close_bt"
+종료 아이콘 = "Close_icon"
+
+정보표시 버튼 = "Info_bt"
+정보표시 아이콘 = "Info_icon"
+
+최소화 버튼 = "Minimode_bt"
+최소화 아이콘 = "Minimode_icon"
+
+
+

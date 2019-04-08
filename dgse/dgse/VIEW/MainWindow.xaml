@@ -4,9 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dgse"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"
+        Height="600" Width="1024">
     <Grid>
-        
+        <Grid x:Name="Topmenu_grid" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1024">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF30BD3F" Offset="0"/>
+                    <GradientStop Color="#FF0090FF" Offset="0.715"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button x:Name="Minimode_bt"  Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
+                    <materialDesign:PackIcon x:Name="Minimode_icon" Kind="WindowMinimize"/>
+                </Button>
+                <Button x:Name="Info_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
+                    <materialDesign:PackIcon x:Name="Info_icon" Kind="InfoOutline"/>
+                </Button>
+                <Button x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2.5">
+                    <materialDesign:PackIcon x:Name="Close_icon" Kind="Close"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>
