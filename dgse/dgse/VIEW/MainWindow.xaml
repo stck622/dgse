@@ -12,7 +12,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="TopBar" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1024" Grid.ColumnSpan="2" MouseDown="TopBar_MouseDown">
+        <Grid x:Name="TopBar" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="1024" Grid.ColumnSpan="2" >
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -34,7 +34,7 @@
                 <Button Style="{StaticResource MyButton}" x:Name="Info_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2">
                     <materialDesign:PackIcon x:Name="Info_icon" Kind="InfoOutline"/>
                 </Button>
-                <Button Style="{StaticResource MyButton}" x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2,0,0" Click="Close_bt_Click" VerticalAlignment="Top">
+                <Button Style="{StaticResource MyButton}" x:Name="Close_bt" Width="25" Height="25"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,2,0,0" VerticalAlignment="Top">
                     <materialDesign:PackIcon x:Name="Close_icon" Kind="Close"/>
                 </Button>
             </StackPanel>
